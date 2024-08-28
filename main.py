@@ -6,8 +6,8 @@ import asyncio
 import utils
 import traceback
 import os
-
-os.environ['MY_TOKEN'] = "NzU3MzQ5MjQxNDQ1NDE3MTMw.GSMBr6.TiKmAI-9Aukb8x-KlLCXQzooxT2tbGgM99wXQk"
+from dotenv import load_dotenv
+load_dotenv()
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
@@ -133,4 +133,4 @@ async def on_ready():
 async def hello(interaction: discord.Interaction):
   await interaction.response.send_message("Hello!")
 
-client.run(os.environ.get('MY_TOKEN'))
+client.run(os.getenv('TOKEN'))
