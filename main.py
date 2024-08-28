@@ -133,4 +133,5 @@ async def on_ready():
 async def hello(interaction: discord.Interaction):
   await interaction.response.send_message("Hello!")
 
+
 client.run(os.getenv('TOKEN'))
